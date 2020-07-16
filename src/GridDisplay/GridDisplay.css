@@ -6,14 +6,16 @@
   outline: 1px solid gray;
 }
 .grid {
+  margin-top: 40px;
+  margin-left: 1px;
   padding: 10px;
   width: 1070px;
   max-width: 1070px;
   display: inline-block;
-  border: 1px solid black;
 }
 .Buttons {
   padding: 10px;
+  position: absolute;
 }
 .Reset {
   float: left;
