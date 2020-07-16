@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GridDisplay from "./GridDisplay/GridDisplay";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GridDisplay />
   </React.StrictMode>,
   document.getElementById('root')
 );

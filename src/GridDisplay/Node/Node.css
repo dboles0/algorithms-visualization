@@ -1,0 +1,37 @@
+.node-start {
+    background-color: blue;
+  }
+  .node-finish {
+    background-color: red;
+  }
+  .node-visited {
+    overflow: hidden;
+    z-index: 0;
+    animation: visited;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+  .node-wall {
+    background-color: black;
+  }
+  .node-shortest-path {
+    background-color: khaki;
+  }
+  @keyframes visited {
+    25% {
+      background-color: rgb(116, 154, 165);
+      border-color: white;
+    }
+    50% {
+      background-color: rgb(146, 192, 204);
+      border-radius: 50px;
+    }
+    75% {
+      background-color: rgb(168, 224, 240);
+    }
+    100% {
+      background-color: rgb(186, 231, 243);
+    }
+  }
+  
