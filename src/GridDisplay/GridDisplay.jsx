@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import "./GridDisplay.css";
 import Dijkstra from "./Algorithms/Dijkstra";
 import Node from "./Node/Node";
-import {
-  getStartingGrid,
-  newGridWithWalls,
-  START_NODE_ROW,
-  START_NODE_COL,
-  FINISH_NODE_ROW,
-  FINISH_NODE_COL,
-} from "../Utilities/Utilities";
+import Functions from "../Utilities/Utilities";
+
+const START_NODE_ROW = 10;
+const START_NODE_COL = 5;
+const FINISH_NODE_ROW = 15;
+const FINISH_NODE_COL = 45;
+
 
 class GridDisplay extends Component {
   constructor(props) {
@@ -20,17 +19,17 @@ class GridDisplay extends Component {
     };
   }
   componentDidMount() {
-    const grid = getStartingGrid();
+    const grid = Functions.getStartingGrid();
     this.setState({ grid });
   }
 
   MouseDown(row, col) {
-    const newGrid = newGridWithWalls(this.state.grid, row, col);
+    const newGrid = Functions.newGridWithWalls(this.state.grid, row, col);
     this.setState({ grid: newGrid, isMousePressed: true });
   }
   MouseHold(row, col) {
     if (!this.state.isMousePressed) return;
-    const newGrid = newGridWithWalls(this.state.grid, row, col);
+    const newGrid = Functions.newGridWithWalls(this.state.grid, row, col);
     this.setState({ grid: newGrid, isMousePressed: true });
   }
   MouseUp() {

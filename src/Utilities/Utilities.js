@@ -31,23 +31,19 @@ const createNode = (col, row) => {
 
 const newGridWithWalls = (grid, row, col) => {
   const updatedGrid = grid.slice();
-  const node =  updatedGrid[row][col];
+  const node = updatedGrid[row][col];
   const newNode = {
     ...node,
     isWall: true,
   };
   updatedGrid[row][col] = newNode;
   return updatedGrid;
-}
+};
 
 let Functions = {
   getStartingGrid,
   createNode,
   newGridWithWalls,
-  START_NODE_ROW,
-  START_NODE_COL,
-  FINISH_NODE_ROW,
-  FINISH_NODE_COL,
 };
 
-module.exports = Functions;
+export default Functions;
