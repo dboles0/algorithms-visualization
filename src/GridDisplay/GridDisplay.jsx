@@ -72,7 +72,7 @@ class GridDisplay extends Component {
     const { grid } = this.state;
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const endNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
-    const VisitedNodes = Dijkstra.dijkstra(grid, startNode, endNode);
+    const VisitedNodes = Dijkstra.Dijkstra(grid, startNode, endNode);
     const ShortesPath = Dijkstra.getShortestPath(endNode);
     this.AnimateDikstra(VisitedNodes, ShortesPath);
   }
